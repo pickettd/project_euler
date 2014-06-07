@@ -1,0 +1,1 @@
+This code is the solution to the first five problems of Project Euler (https://projecteuler.net/ ) written in Javascript.
