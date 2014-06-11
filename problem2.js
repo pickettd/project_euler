@@ -1,4 +1,6 @@
-"use strict";
+/*jslint node: true */
+'use strict';
+
 /*
 Problem URL: 
 https://projecteuler.net/problem=2
@@ -24,19 +26,17 @@ var term_n = term_n_minus_1;
 var sum = 0;
 
 // We only want to continue the operation as long as the value of our nth term doesn't exceed the max term value.
-while (term_n < max_term_value)
-{
-  // We use the mod operator to check if the nth term's value is even.
-  if ((term_n % 2) === 0)
-  {
-    // If the nth term's value is even, add it to our running sum.
-    sum += term_n;
-  }
+while (term_n < max_term_value) {
+    // We use the mod operator to check if the nth term's value is even.
+    if ((term_n % 2) === 0) {
+        // If the nth term's value is even, add it to our running sum.
+        sum += term_n;
+    }
 
-  // Each of the term value variables can now be updated for the next iteration of the loop.
-  term_n = term_n_minus_2 + term_n_minus_1;
-  term_n_minus_2 = term_n_minus_1;
-  term_n_minus_1 = term_n;
+    // Each of the term value variables can now be updated for the next iteration of the loop.
+    term_n = term_n_minus_2 + term_n_minus_1;
+    term_n_minus_2 = term_n_minus_1;
+    term_n_minus_1 = term_n;
 }
 
-return sum;
+console.log("The sum of terms is: " + sum);
